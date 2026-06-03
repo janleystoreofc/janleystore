@@ -1,29 +1,55 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Catalog } from "@/components/Catalog";
+import { OrderForm } from "@/components/OrderForm";
+import { Process } from "@/components/Process";
+import { Gallery } from "@/components/Gallery";
+import { Testimonials } from "@/components/Testimonials";
+import { FAQ } from "@/components/FAQ";
+import { Contact } from "@/components/Contact";
+import { WhatsappFloat } from "@/components/WhatsappFloat";
+import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "JANLEY 3D — Impressão 3D Premium em Portugal" },
+      {
+        name: "description",
+        content:
+          "Impressão 3D de alta precisão em Portugal. Decoração, organização, gaming, projetos personalizados e brindes corporativos com acabamento premium.",
+      },
+      { property: "og:title", content: "JANLEY 3D — Impressão 3D Premium" },
+      {
+        property: "og:description",
+        content: "Produção personalizada com precisão milimétrica. Envios para todo Portugal.",
+      },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Navbar />
+      <main>
+        <Hero />
+        <div className="hairline max-w-5xl mx-auto" />
+        <About />
+        <Catalog />
+        <OrderForm />
+        <Process />
+        <Gallery />
+        <Testimonials />
+        <FAQ />
+        <Contact />
+      </main>
+      <WhatsappFloat />
+      <Toaster richColors theme="dark" position="bottom-center" />
     </div>
   );
 }
