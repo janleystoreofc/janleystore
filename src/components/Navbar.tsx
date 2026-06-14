@@ -30,7 +30,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3 group">
-          <Logo className="h-12 w-auto transition-transform group-hover:rotate-12" />
+          <Logo className="h-10 w-auto transition-transform group-hover:rotate-12" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
