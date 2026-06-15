@@ -15,8 +15,7 @@ export function About() {
           <div>
             <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 sm:mb-5">— Sobre Nós</div>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-5 sm:mb-8">
-              Precisão. <span className="text-gradient-gold italic">Inovação.</span><br />
-              Qualidade.
+              Precisão. <span className="text-gradient-gold italic">Inovação.</span> Qualidade.
             </h2>
             <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
               Cada peça é cuidadosamente impressa, revisada e finalizada — porque acreditamos que
