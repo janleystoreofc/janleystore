@@ -46,7 +46,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-8 sm:mt-14 flex flex-wrap items-center gap-x-6 sm:gap-x-10 gap-y-3 sm:gap-y-4 text-xs sm:text-sm text-muted-foreground">
+          <div className="mt-8 sm:mt-14 flex items-center gap-x-4 sm:gap-x-10 text-xs sm:text-sm text-muted-foreground">
             <div>
               <div className="font-display text-2xl sm:text-3xl text-primary">+200</div>
               <div className="text-[10px] sm:text-xs tracking-wider uppercase">Projetos entregues</div>
