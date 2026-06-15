@@ -1,11 +1,21 @@
-import logoAsset from "@/assets/janley-logo.png.asset.json";
+import sunflowerAsset from "@/assets/sunflower.png.asset.json";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
-    <img
-      src={logoAsset.url}
-      alt="JANLEY STORE - Impressão 3D"
-      className={`h-12 w-auto ${className}`}
-    />
+    <div className={`flex items-center gap-3 ${className}`}>
+      <img
+        src={sunflowerAsset.url}
+        alt="Girassol JANLEY STORE"
+        className="h-16 md:h-20 w-auto drop-shadow-md"
+      />
+      <div className="flex flex-col leading-tight">
+        <span className="font-display font-bold text-2xl md:text-3xl text-foreground tracking-tight">
+          JANLEY <span className="text-primary">STORE</span>
+        </span>
+        <span className="text-[10px] md:text-xs uppercase tracking-[0.25em] text-muted-foreground">
+          Impressão 3D
+        </span>
+      </div>
+    </div>
   );
 }
