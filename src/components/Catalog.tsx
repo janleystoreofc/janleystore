@@ -28,7 +28,7 @@ export function Catalog() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
           {filtered.map((p) => (
             <article
               key={p.id}
@@ -48,7 +48,7 @@ export function Catalog() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="font-display text-lg leading-tight mb-1">{p.name}</h3>
+                <h3 className="font-display text-sm md:text-base leading-tight mb-1">{p.name}</h3>
                 <p className="text-xs text-muted-foreground mb-4 line-clamp-2">{p.desc}</p>
                 <div className="flex items-center justify-between">
                   <div>
