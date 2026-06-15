@@ -1,28 +1,11 @@
-import { useMemo, useState } from "react";
-import { products, categories, colors, materials, type Product } from "@/data/products";
+import { products, type Product } from "@/data/products";
 import { Button } from "./ui/button";
 import { Plus } from "lucide-react";
 
 const WA = "351900000000";
 
 export function Catalog() {
-  const [cat, setCat] = useState<string>("Todos");
-  const [color, setColor] = useState("Todos");
-  const [material, setMaterial] = useState("Todos");
-  const [maxPrice, setMaxPrice] = useState(100);
-  
-
-  const filtered = useMemo(
-    () =>
-      products.filter(
-        (p) =>
-          (cat === "Todos" || p.category === cat) &&
-          (color === "Todos" || p.color === color) &&
-          (material === "Todos" || p.material === material) &&
-          p.price <= maxPrice,
-      ),
-    [cat, color, material, maxPrice],
-  );
+  const filtered = products;
 
   const order = (p: Product) => {
     const text = encodeURIComponent(
@@ -42,41 +25,6 @@ export function Catalog() {
           <p className="text-muted-foreground">
             Peças impressas com precisão milimétrica, prontas a encomendar.
           </p>
-        </div>
-
-        {/* Filters */}
-        <div className="glass rounded-2xl p-6 mb-10">
-          <div className="flex flex-wrap gap-4 items-center">
-            <Select label="Material" value={material} onChange={setMaterial} options={materials} />
-            <div className="flex items-center gap-3 min-w-[180px]">
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">Preço</span>
-              <input
-                type="range"
-                min={5}
-                max={100}
-                value={maxPrice}
-                onChange={(e) => setMaxPrice(Number(e.target.value))}
-                className="flex-1 accent-[oklch(0.78_0.13_75)]"
-              />
-              <span className="text-sm text-primary w-12 text-right">€{maxPrice}</span>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-border/40">
-            {categories.map((c) => (
-              <button
-                key={c}
-                onClick={() => setCat(c)}
-                className={`px-4 py-1.5 rounded-full text-xs tracking-wider uppercase transition-all ${
-                  cat === c
-                    ? "bg-[image:var(--gradient-gold)] text-primary-foreground shadow-[var(--shadow-gold)]"
-                    : "border border-border text-muted-foreground hover:text-primary hover:border-primary/40"
-                }`}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* Grid */}
@@ -128,31 +76,3 @@ export function Catalog() {
   );
 }
 
-function Select({
-  label,
-  value,
-  onChange,
-  options,
-}: {
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-  options: string[];
-}) {
-  return (
-    <label className="flex items-center gap-2 text-sm">
-      <span className="text-xs uppercase tracking-wider text-muted-foreground">{label}</span>
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="bg-input/40 border border-border rounded-md h-10 px-3 text-sm focus:border-primary outline-none"
-      >
-        {options.map((o) => (
-          <option key={o} value={o} className="bg-background">
-            {o}
-          </option>
-        ))}
-      </select>
-    </label>
-  );
-}
