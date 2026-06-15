@@ -2,9 +2,9 @@ import { Award, Cpu, Sparkles, ShieldCheck } from "lucide-react";
 
 const items = [
   { icon: Cpu, title: "Tecnologia Avançada", desc: "Impressoras FDM e Resina de última geração." },
-  { icon: Sparkles, title: "Acabamento Premium", desc: "Pós-processamento meticuloso peça a peça." },
+  { icon: Sparkles, title: "Acabamento Premium", desc: "Revisão e finalização cuidadosa em cada peça." },
   { icon: Award, title: "Projetos Exclusivos", desc: "Catálogo próprio e desenvolvimento sob medida." },
-  { icon: ShieldCheck, title: "Confiança", desc: "Envio seguro e garantia de qualidade." },
+  { icon: ShieldCheck, title: "Confiança", desc: "Envio seguro para todo o território nacional e garantia de qualidade." },
 ];
 
 export function About() {
