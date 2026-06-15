@@ -27,41 +27,6 @@ export function Catalog() {
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="glass rounded-2xl p-6 mb-10">
-          <div className="flex flex-wrap gap-4 items-center">
-            <Select label="Material" value={material} onChange={setMaterial} options={materials} />
-            <div className="flex items-center gap-3 min-w-[180px]">
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">Preço</span>
-              <input
-                type="range"
-                min={5}
-                max={100}
-                value={maxPrice}
-                onChange={(e) => setMaxPrice(Number(e.target.value))}
-                className="flex-1 accent-[oklch(0.78_0.13_75)]"
-              />
-              <span className="text-sm text-primary w-12 text-right">€{maxPrice}</span>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-border/40">
-            {categories.map((c) => (
-              <button
-                key={c}
-                onClick={() => setCat(c)}
-                className={`px-4 py-1.5 rounded-full text-xs tracking-wider uppercase transition-all ${
-                  cat === c
-                    ? "bg-[image:var(--gradient-gold)] text-primary-foreground shadow-[var(--shadow-gold)]"
-                    : "border border-border text-muted-foreground hover:text-primary hover:border-primary/40"
-                }`}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Grid */}
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
           {filtered.map((p) => (
