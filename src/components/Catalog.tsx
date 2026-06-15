@@ -48,7 +48,7 @@ export function Catalog() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="font-display text-lg leading-tight mb-1">{p.name}</h3>
+                <h3 className="font-display text-sm md:text-base leading-tight mb-1">{p.name}</h3>
                 <p className="text-xs text-muted-foreground mb-4 line-clamp-2">{p.desc}</p>
                 <div className="flex items-center justify-between">
                   <div>
