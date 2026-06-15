@@ -19,10 +19,9 @@ export function Catalog() {
           (cat === "Todos" || p.category === cat) &&
           (color === "Todos" || p.color === color) &&
           (material === "Todos" || p.material === material) &&
-          p.price <= maxPrice &&
-          (q.trim() === "" || p.name.toLowerCase().includes(q.toLowerCase())),
+          p.price <= maxPrice,
       ),
-    [cat, color, material, maxPrice, q],
+    [cat, color, material, maxPrice],
   );
 
   const order = (p: Product) => {
