@@ -1,4 +1,4 @@
-import sunflowerAsset from "@/assets/sunflower.png.asset.json";
+import sunflowerAsset from "@/assets/girassol.png.asset.json";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
