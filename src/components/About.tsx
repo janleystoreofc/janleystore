@@ -18,11 +18,6 @@ export function About() {
               Precisão. <span className="text-gradient-gold italic">Inovação.</span><br />
               Qualidade.
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 sm:mb-6">
-              Na <span className="text-foreground">JANLEY 3D</span> produzimos peças exclusivas
-              através de tecnologia de impressão 3D de alta qualidade. Trabalhamos com projetos
-              personalizados e catálogo próprio, oferecendo envios para todo Portugal.
-            </p>
             <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
               Cada peça é cuidadosamente impressa, revisada e finalizada — porque acreditamos que
               detalhe é o que separa o comum do extraordinário.
