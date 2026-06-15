@@ -17,60 +17,60 @@ export function Contact() {
               Estamos disponíveis para esclarecer dúvidas, orçamentos e projetos especiais.
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3 lg:space-y-4">
               <a
                 href={`https://wa.me/${WA}`}
                 target="_blank"
                 rel="noreferrer"
-                className="glass rounded-xl p-5 flex items-center gap-4 hover:border-primary/40 transition-all group"
+                className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4 hover:border-primary/40 transition-all group"
               >
-                <div className="h-12 w-12 rounded-lg bg-[image:var(--gradient-gold)] flex items-center justify-center shrink-0">
-                  <MessageCircle className="h-5 w-5 text-primary-foreground" />
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-[image:var(--gradient-gold)] flex items-center justify-center shrink-0">
+                  <MessageCircle className="h-4 w-4 lg:h-5 lg:w-5 text-primary-foreground" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
-                  <div className="font-medium">+351 900 000 000</div>
+                  <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
+                  <div className="font-medium text-sm lg:text-base">+351 900 000 000</div>
                 </div>
               </a>
               <a
                 href="mailto:janleystorebr@gmail.com"
-                className="glass rounded-xl p-5 flex items-center gap-4 hover:border-primary/40 transition-all"
+                className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4 hover:border-primary/40 transition-all"
               >
-                <div className="h-12 w-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
-                  <Mail className="h-5 w-5 text-primary" />
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
+                  <Mail className="h-4 w-4 lg:h-5 lg:w-5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground font-bold">Email</div>
-                  <div className="font-medium">janleystorebr@gmail.com</div>
+                  <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground font-bold">Email</div>
+                  <div className="font-medium text-sm lg:text-base">janleystorebr@gmail.com</div>
                 </div>
               </a>
-              <div className="glass rounded-xl p-5 flex items-center gap-4">
-                <div className="h-12 w-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
-                  <MapPin className="h-5 w-5 text-primary" />
+              <div className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4">
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
+                  <MapPin className="h-4 w-4 lg:h-5 lg:w-5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">Localização</div>
-                  <div className="font-medium">Portugal · Envios para todo o país</div>
+                  <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground">Localização</div>
+                  <div className="font-medium text-sm lg:text-base">Portugal · Envios para todo o país</div>
                 </div>
               </div>
-              <div className="flex gap-3 pt-4">
+              <div className="flex gap-3 pt-2 lg:pt-4">
                 <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="h-11 w-11 rounded-lg glass flex items-center justify-center hover:text-primary hover:border-primary/40 transition-all"
+                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg glass flex items-center justify-center hover:text-primary hover:border-primary/40 transition-all"
                   aria-label="Instagram"
                 >
-                  <Instagram className="h-5 w-5" />
+                  <Instagram className="h-4 w-4 lg:h-5 lg:w-5" />
                 </a>
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="h-11 w-11 rounded-lg glass flex items-center justify-center hover:text-primary hover:border-primary/40 transition-all"
+                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg glass flex items-center justify-center hover:text-primary hover:border-primary/40 transition-all"
                   aria-label="Facebook"
                 >
-                  <Facebook className="h-5 w-5" />
+                  <Facebook className="h-4 w-4 lg:h-5 lg:w-5" />
                 </a>
               </div>
             </div>
