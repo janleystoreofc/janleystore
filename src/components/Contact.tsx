@@ -24,8 +24,8 @@ export function Contact() {
                 rel="noreferrer"
                 className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4 hover:border-primary/40 transition-all group"
               >
-                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-[image:var(--gradient-gold)] flex items-center justify-center shrink-0">
-                  <MessageCircle className="h-4 w-4 lg:h-5 lg:w-5 text-primary-foreground" />
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-orange-500 flex items-center justify-center shrink-0">
+                  <MessageCircle className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                 </div>
                 <div>
                   <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
