@@ -24,7 +24,7 @@ export function About() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
+          <div className="grid grid-cols-2 gap-4 sm:gap-5">
             {items.map((it) => (
               <div
                 key={it.title}
