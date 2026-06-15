@@ -10,7 +10,7 @@ export function Catalog() {
   const [color, setColor] = useState("Todos");
   const [material, setMaterial] = useState("Todos");
   const [maxPrice, setMaxPrice] = useState(100);
-  const [q, setQ] = useState("");
+  
 
   const filtered = useMemo(
     () =>
