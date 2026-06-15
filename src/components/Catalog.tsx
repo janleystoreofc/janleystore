@@ -1,8 +1,7 @@
 import { useMemo, useState } from "react";
 import { products, categories, colors, materials, type Product } from "@/data/products";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Search, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 
 const WA = "351900000000";
 
