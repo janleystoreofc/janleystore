@@ -11,7 +11,7 @@ export function Contact() {
           <div>
             <div className="text-xs tracking-[0.3em] uppercase text-primary mb-5">— Contacto</div>
             <h2 className="font-display text-5xl md:text-6xl mb-8 leading-[1.05]">
-              Vamos <span className="text-gradient-gold italic">conversar</span>
+              Fale&nbsp;<span className="text-gradient-gold italic">conosco</span>
             </h2>
             <p className="text-muted-foreground mb-10 max-w-md">
               Estamos disponíveis para esclarecer dúvidas, orçamentos e projetos especiais.
