@@ -32,8 +32,7 @@ export function Hero() {
           </h1>
 
           <p className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-            Produção personalizada para decoração, organização, empresas, presentes,
-            prototipagem e muito mais — com acabamento meticuloso e entrega em todo Portugal.
+            Produção personalizada para decoração, organização, brindes, empresas, presentes, protótipos exclusivos e sob medida.
           </p>
 
           <div className="flex flex-wrap gap-4">
