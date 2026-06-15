@@ -9,7 +9,7 @@ export function Contact() {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <div>
-            <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 lg:mb-5">— Contacto</div>
+            <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 lg:mb-5 font-bold">— Contacto</div>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl mb-4 lg:mb-8 leading-[1.05]">
               Fale&nbsp;<span className="text-gradient-gold italic">conosco</span>
             </h2>
