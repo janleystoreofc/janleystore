@@ -10,9 +10,9 @@ export function Testimonials() {
   return (
     <section className="py-16 sm:py-24 lg:py-32 relative">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="text-xs tracking-[0.3em] uppercase text-primary mb-5">— Testemunhos</div>
-          <h2 className="font-display text-5xl md:text-6xl">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+          <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 sm:mb-5">— Testemunhos</div>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             Quem confiou, <span className="text-gradient-gold italic">recomenda</span>
           </h2>
         </div>
