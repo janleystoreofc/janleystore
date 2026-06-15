@@ -45,8 +45,8 @@ export function Contact() {
                 </div>
               </a>
               <div className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4">
-                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
-                  <MapPin className="h-4 w-4 lg:h-5 lg:w-5 text-primary" />
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-orange-500 flex items-center justify-center shrink-0">
+                  <MapPin className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                 </div>
                 <div>
                   <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground font-bold">Localização</div>
@@ -58,7 +58,7 @@ export function Contact() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-[#3E2723] flex items-center justify-center hover:opacity-90 transition-all"
+                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-orange-500 flex items-center justify-center hover:opacity-90 transition-all"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
@@ -67,7 +67,7 @@ export function Contact() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-[#3E2723] flex items-center justify-center hover:opacity-90 transition-all"
+                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-orange-500 flex items-center justify-center hover:opacity-90 transition-all"
                   aria-label="Facebook"
                 >
                   <Facebook className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
