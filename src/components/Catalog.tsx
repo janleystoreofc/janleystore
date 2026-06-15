@@ -76,31 +76,3 @@ export function Catalog() {
   );
 }
 
-function Select({
-  label,
-  value,
-  onChange,
-  options,
-}: {
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-  options: string[];
-}) {
-  return (
-    <label className="flex items-center gap-2 text-sm">
-      <span className="text-xs uppercase tracking-wider text-muted-foreground">{label}</span>
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="bg-input/40 border border-border rounded-md h-10 px-3 text-sm focus:border-primary outline-none"
-      >
-        {options.map((o) => (
-          <option key={o} value={o} className="bg-background">
-            {o}
-          </option>
-        ))}
-      </select>
-    </label>
-  );
-}
