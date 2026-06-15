@@ -19,17 +19,17 @@ export function Testimonials() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {t.map((x) => (
-            <div key={x.name} className="glass rounded-2xl p-8 hover:border-primary/40 transition-all hover:-translate-y-1">
-              <div className="flex gap-0.5 mb-5">
+            <div key={x.name} className="glass rounded-2xl p-5 sm:p-8 hover:border-primary/40 transition-all hover:-translate-y-1">
+              <div className="flex gap-0.5 mb-3 sm:mb-5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                  <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 fill-primary text-primary" />
                 ))}
               </div>
-              <p className="text-foreground/90 leading-relaxed mb-6 italic font-display text-lg">
+              <p className="text-foreground/90 leading-relaxed mb-4 sm:mb-6 italic font-display text-sm sm:text-lg">
                 "{x.text}"
               </p>
-              <div className="border-t border-border/40 pt-4">
-                <div className="font-medium">{x.name}</div>
+              <div className="border-t border-border/40 pt-3 sm:pt-4">
+                <div className="font-medium text-sm sm:text-base">{x.name}</div>
                 <div className="text-xs text-muted-foreground">{x.role}</div>
               </div>
             </div>
