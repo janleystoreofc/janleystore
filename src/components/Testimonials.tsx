@@ -8,7 +8,7 @@ const t = [
 
 export function Testimonials() {
   return (
-    <section className="py-32 relative">
+    <section className="py-16 sm:py-24 lg:py-32 relative">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="text-xs tracking-[0.3em] uppercase text-primary mb-5">— Testemunhos</div>
