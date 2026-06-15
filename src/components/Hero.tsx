@@ -66,7 +66,6 @@ export function Hero() {
 
         <div className="col-span-4 lg:col-span-5 animate-fade-up [animation-delay:200ms]">
           <div className="relative aspect-square glass rounded-2xl p-2 md:p-4 lg:p-8 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-2xl bg-[image:var(--gradient-gold)] opacity-[0.04]" />
             <img
               src={heroImg}
               alt="Impressora 3D em funcionamento"
