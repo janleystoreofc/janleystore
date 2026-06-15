@@ -20,7 +20,7 @@ export function Hero() {
         <div className="lg:col-span-7 animate-fade-up">
           <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 mb-8">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            <span className="text-xs tracking-[0.25em] text-primary/90 uppercase">
+            <span className="text-xs tracking-[0.25em] text-accent uppercase">
               3D PREMIUM STUDIO · PORTUGAL
             </span>
           </div>
