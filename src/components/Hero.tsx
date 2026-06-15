@@ -16,8 +16,8 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-12 gap-10 items-center">
-        <div className="lg:col-span-7 animate-fade-up">
+      <div className="container mx-auto px-6 relative z-10 grid grid-cols-12 gap-4 lg:gap-10 items-center">
+        <div className="col-span-8 lg:col-span-7 animate-fade-up">
           <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 mb-8">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs tracking-[0.25em] text-accent uppercase">
