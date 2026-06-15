@@ -47,7 +47,7 @@ export function Hero() {
 
           <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm text-muted-foreground">
             <div>
-              <div className="font-display text-3xl text-primary">+500</div>
+              <div className="font-display text-3xl text-primary">+200</div>
               <div className="text-xs tracking-wider uppercase">Projetos entregues</div>
             </div>
             <div className="hidden sm:block h-10 w-px bg-border" />
