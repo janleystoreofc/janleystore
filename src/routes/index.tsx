@@ -39,14 +39,13 @@ function Index() {
       <main>
         <Hero />
         <div className="hairline max-w-5xl mx-auto" />
-        <About />
         <Catalog />
         <OrderForm />
         <Process />
-        
         <Testimonials />
         <FAQ />
         <Contact />
+        <About />
       </main>
       <WhatsappFloat />
       <Toaster richColors theme="dark" position="bottom-center" />
