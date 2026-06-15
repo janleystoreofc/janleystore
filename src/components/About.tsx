@@ -9,7 +9,7 @@ const items = [
 
 export function About() {
   return (
-    <section id="sobre" className="py-32 relative">
+    <section id="sobre" className="py-16 sm:py-24 lg:py-32 relative">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
