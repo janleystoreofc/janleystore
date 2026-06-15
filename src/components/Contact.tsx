@@ -28,7 +28,7 @@ export function Contact() {
                   <MessageCircle className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                 </div>
                 <div>
-                  <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
+                  <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground font-bold">WhatsApp</div>
                   <div className="font-medium text-sm lg:text-base">+351 900 000 000</div>
                 </div>
               </a>
