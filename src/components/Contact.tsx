@@ -5,15 +5,15 @@ const WA = "351900000000";
 
 export function Contact() {
   return (
-    <section id="contacto" className="py-32 relative">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+    <section id="contacto" className="py-16 lg:py-24 relative">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <div>
-            <div className="text-xs tracking-[0.3em] uppercase text-primary mb-5">— Contacto</div>
-            <h2 className="font-display text-5xl md:text-6xl mb-8 leading-[1.05]">
+            <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 lg:mb-5">— Contacto</div>
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl mb-4 lg:mb-8 leading-[1.05]">
               Fale&nbsp;<span className="text-gradient-gold italic">conosco</span>
             </h2>
-            <p className="text-muted-foreground mb-10 max-w-md">
+            <p className="text-muted-foreground mb-6 lg:mb-10 max-w-md text-sm lg:text-base">
               Estamos disponíveis para esclarecer dúvidas, orçamentos e projetos especiais.
             </p>
 
