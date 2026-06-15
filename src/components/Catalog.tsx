@@ -39,7 +39,7 @@ export function Catalog() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="text-xs tracking-[0.3em] uppercase text-primary mb-5">— Catálogo</div>
           <h2 className="font-display text-5xl md:text-6xl mb-5">
-            Coleção <span className="text-gradient-gold italic">Curada</span>
+            Coleção&nbsp;<span className="text-gradient-gold italic">Disponível</span>
           </h2>
           <p className="text-muted-foreground">
             Peças impressas com precisão milimétrica, prontas a encomendar.
