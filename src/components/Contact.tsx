@@ -33,7 +33,7 @@ export function Contact() {
                 </div>
               </a>
               <a
-                href="mailto:hello@janley3d.pt"
+                href="mailto:janleystorebr@gmail.com"
                 className="glass rounded-xl p-5 flex items-center gap-4 hover:border-primary/40 transition-all"
               >
                 <div className="h-12 w-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
@@ -41,7 +41,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
-                  <div className="font-medium">hello@janley3d.pt</div>
+                  <div className="font-medium">janleystorebr@gmail.com</div>
                 </div>
               </a>
               <div className="glass rounded-xl p-5 flex items-center gap-4">

@@ -41,11 +41,11 @@ export function OrderForm() {
               — Pedido de Orçamento
             </div>
             <h2 className="font-display text-5xl md:text-6xl mb-6 leading-[1.05]">
-              Já tem um <span className="text-gradient-gold italic">projeto</span> em mente?
+              Tem um <span className="text-gradient-gold italic">projeto</span> em mente?
             </h2>
             <p className="text-muted-foreground mb-8">
-              Envie-nos os detalhes ou os seus ficheiros 3D (STL, OBJ, STEP) e receba um
-              orçamento personalizado em até 48h.
+              Envie-nos os detalhes ou os seus ficheiros e receba um orçamento
+              personalizado em até 48h.
             </p>
             <div className="glass rounded-xl p-6">
               <FileBox className="h-6 w-6 text-primary mb-3" />
