@@ -1,8 +1,7 @@
 import { useMemo, useState } from "react";
 import { products, categories, colors, materials, type Product } from "@/data/products";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Search, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 
 const WA = "351900000000";
 
@@ -11,7 +10,7 @@ export function Catalog() {
   const [color, setColor] = useState("Todos");
   const [material, setMaterial] = useState("Todos");
   const [maxPrice, setMaxPrice] = useState(100);
-  const [q, setQ] = useState("");
+  
 
   const filtered = useMemo(
     () =>
@@ -20,10 +19,9 @@ export function Catalog() {
           (cat === "Todos" || p.category === cat) &&
           (color === "Todos" || p.color === color) &&
           (material === "Todos" || p.material === material) &&
-          p.price <= maxPrice &&
-          (q.trim() === "" || p.name.toLowerCase().includes(q.toLowerCase())),
+          p.price <= maxPrice,
       ),
-    [cat, color, material, maxPrice, q],
+    [cat, color, material, maxPrice],
   );
 
   const order = (p: Product) => {
@@ -48,16 +46,7 @@ export function Catalog() {
 
         {/* Filters */}
         <div className="glass rounded-2xl p-6 mb-10">
-          <div className="grid lg:grid-cols-[1fr_auto_auto_auto_1fr] gap-4 items-center">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                placeholder="Pesquisar produtos…"
-                value={q}
-                onChange={(e) => setQ(e.target.value)}
-                className="pl-10 bg-input/40 border-border"
-              />
-            </div>
+          <div className="flex flex-wrap gap-4 items-center">
             <Select label="Material" value={material} onChange={setMaterial} options={materials} />
             <div className="flex items-center gap-3 min-w-[180px]">
               <span className="text-xs text-muted-foreground uppercase tracking-wider">Preço</span>
