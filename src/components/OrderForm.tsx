@@ -40,7 +40,7 @@ export function OrderForm() {
             <div className="text-xs tracking-[0.3em] uppercase text-primary mb-5">
               — Pedido de Orçamento
             </div>
-            <h2 className="font-display text-5xl md:text-6xl mb-6 leading-[1.05]">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-[1.05]">
               Tem um <span className="text-gradient-gold italic">projeto</span> em mente?
             </h2>
             <p className="text-muted-foreground mb-8">
