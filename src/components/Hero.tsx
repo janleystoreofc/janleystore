@@ -27,9 +27,10 @@ export function Hero() {
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-6">
             Transformando<br />
-            ideias em&nbsp;<br />
-            <span className="text-gradient-gold italic">Realidade</span> com Impressão 3D<br />
-            <span className="text-muted-foreground"> de alta precisão.</span>
+            &nbsp; &nbsp; ideias em&nbsp;<br />
+            <span className="text-gradient-gold italic">Realidade</span> com<br />
+            &nbsp;Impressão 3D<br />
+            de alta precisão.
           </h1>
 
           <p className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
