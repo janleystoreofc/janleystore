@@ -50,7 +50,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground">Localização</div>
-                  <div className="font-medium text-sm lg:text-base">Portugal · Envios para todo o país</div>
+                  <div className="font-medium text-sm lg:text-base">Guimarães, Braga - Portugal</div>
                 </div>
               </div>
               <div className="flex gap-3 pt-2 lg:pt-4">
@@ -78,8 +78,8 @@ export function Contact() {
 
           <div className="glass rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[600px]">
             <iframe
-              title="Mapa Portugal"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-9.5%2C38.6%2C-9.0%2C38.9&layer=mapnik"
+              title="Mapa Guimarães"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-8.35%2C41.41%2C-8.25%2C41.47&layer=mapnik&marker=41.44%2C-8.30"
               className="w-full h-full grayscale-[80%] contrast-110 opacity-90"
               loading="lazy"
             />
