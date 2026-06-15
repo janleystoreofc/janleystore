@@ -124,8 +124,8 @@ export function Catalog() {
                     </div>
                     <div className="font-display text-2xl text-gradient-gold">€{p.price}</div>
                   </div>
-                  <Button size="sm" variant="hero" onClick={() => order(p)}>
-                    <Plus className="h-3 w-3" /> Encomendar
+                  <Button size="icon" variant="hero" onClick={() => order(p)} title="Encomendar">
+                    <Plus className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
