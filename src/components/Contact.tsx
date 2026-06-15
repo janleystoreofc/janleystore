@@ -76,7 +76,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="glass rounded-2xl overflow-hidden aspect-[4/5] lg:aspect-auto lg:h-[600px]">
+          <div className="glass rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[600px]">
             <iframe
               title="Mapa Portugal"
               src="https://www.openstreetmap.org/export/embed.html?bbox=-9.5%2C38.6%2C-9.0%2C38.9&layer=mapnik"
@@ -87,13 +87,13 @@ export function Contact() {
         </div>
       </div>
 
-      <footer className="container mx-auto px-6 mt-32 pt-10 border-t border-border/40">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-3">
-            <Logo className="h-8 w-8" />
+      <footer className="container mx-auto px-4 lg:px-6 mt-16 lg:mt-32 pt-6 lg:pt-10 border-t border-border/40">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs lg:text-sm text-muted-foreground">
+          <div className="flex items-center gap-2 lg:gap-3">
+            <Logo className="h-6 w-6 lg:h-8 lg:w-8" />
             <span>© {new Date().getFullYear()} JANLEY 3D · Todos os direitos reservados</span>
           </div>
-          <div className="text-xs tracking-[0.2em] uppercase text-primary/80">
+          <div className="text-[10px] lg:text-xs tracking-[0.2em] uppercase text-primary/80">
             Crafted with precision in Portugal
           </div>
         </div>
