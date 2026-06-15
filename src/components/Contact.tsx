@@ -5,78 +5,78 @@ const WA = "351900000000";
 
 export function Contact() {
   return (
-    <section id="contacto" className="py-32 relative">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+    <section id="contacto" className="py-16 lg:py-24 relative">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <div>
-            <div className="text-xs tracking-[0.3em] uppercase text-primary mb-5">— Contacto</div>
-            <h2 className="font-display text-5xl md:text-6xl mb-8 leading-[1.05]">
+            <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 lg:mb-5">— Contacto</div>
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl mb-4 lg:mb-8 leading-[1.05]">
               Fale&nbsp;<span className="text-gradient-gold italic">conosco</span>
             </h2>
-            <p className="text-muted-foreground mb-10 max-w-md">
+            <p className="text-muted-foreground mb-6 lg:mb-10 max-w-md text-sm lg:text-base">
               Estamos disponíveis para esclarecer dúvidas, orçamentos e projetos especiais.
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3 lg:space-y-4">
               <a
                 href={`https://wa.me/${WA}`}
                 target="_blank"
                 rel="noreferrer"
-                className="glass rounded-xl p-5 flex items-center gap-4 hover:border-primary/40 transition-all group"
+                className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4 hover:border-primary/40 transition-all group"
               >
-                <div className="h-12 w-12 rounded-lg bg-[image:var(--gradient-gold)] flex items-center justify-center shrink-0">
-                  <MessageCircle className="h-5 w-5 text-primary-foreground" />
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-[image:var(--gradient-gold)] flex items-center justify-center shrink-0">
+                  <MessageCircle className="h-4 w-4 lg:h-5 lg:w-5 text-primary-foreground" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
-                  <div className="font-medium">+351 900 000 000</div>
+                  <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
+                  <div className="font-medium text-sm lg:text-base">+351 900 000 000</div>
                 </div>
               </a>
               <a
                 href="mailto:janleystorebr@gmail.com"
-                className="glass rounded-xl p-5 flex items-center gap-4 hover:border-primary/40 transition-all"
+                className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4 hover:border-primary/40 transition-all"
               >
-                <div className="h-12 w-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
-                  <Mail className="h-5 w-5 text-primary" />
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
+                  <Mail className="h-4 w-4 lg:h-5 lg:w-5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground font-bold">Email</div>
-                  <div className="font-medium">janleystorebr@gmail.com</div>
+                  <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground font-bold">Email</div>
+                  <div className="font-medium text-sm lg:text-base">janleystorebr@gmail.com</div>
                 </div>
               </a>
-              <div className="glass rounded-xl p-5 flex items-center gap-4">
-                <div className="h-12 w-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
-                  <MapPin className="h-5 w-5 text-primary" />
+              <div className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4">
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
+                  <MapPin className="h-4 w-4 lg:h-5 lg:w-5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">Localização</div>
-                  <div className="font-medium">Portugal · Envios para todo o país</div>
+                  <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground">Localização</div>
+                  <div className="font-medium text-sm lg:text-base">Portugal · Envios para todo o país</div>
                 </div>
               </div>
-              <div className="flex gap-3 pt-4">
+              <div className="flex gap-3 pt-2 lg:pt-4">
                 <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="h-11 w-11 rounded-lg glass flex items-center justify-center hover:text-primary hover:border-primary/40 transition-all"
+                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg glass flex items-center justify-center hover:text-primary hover:border-primary/40 transition-all"
                   aria-label="Instagram"
                 >
-                  <Instagram className="h-5 w-5" />
+                  <Instagram className="h-4 w-4 lg:h-5 lg:w-5" />
                 </a>
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="h-11 w-11 rounded-lg glass flex items-center justify-center hover:text-primary hover:border-primary/40 transition-all"
+                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg glass flex items-center justify-center hover:text-primary hover:border-primary/40 transition-all"
                   aria-label="Facebook"
                 >
-                  <Facebook className="h-5 w-5" />
+                  <Facebook className="h-4 w-4 lg:h-5 lg:w-5" />
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="glass rounded-2xl overflow-hidden aspect-[4/5] lg:aspect-auto lg:h-[600px]">
+          <div className="glass rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[600px]">
             <iframe
               title="Mapa Portugal"
               src="https://www.openstreetmap.org/export/embed.html?bbox=-9.5%2C38.6%2C-9.0%2C38.9&layer=mapnik"
@@ -87,13 +87,13 @@ export function Contact() {
         </div>
       </div>
 
-      <footer className="container mx-auto px-6 mt-32 pt-10 border-t border-border/40">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-3">
-            <Logo className="h-8 w-8" />
+      <footer className="container mx-auto px-4 lg:px-6 mt-16 lg:mt-32 pt-6 lg:pt-10 border-t border-border/40">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs lg:text-sm text-muted-foreground">
+          <div className="flex items-center gap-2 lg:gap-3">
+            <Logo className="h-6 w-6 lg:h-8 lg:w-8" />
             <span>© {new Date().getFullYear()} JANLEY 3D · Todos os direitos reservados</span>
           </div>
-          <div className="text-xs tracking-[0.2em] uppercase text-primary/80">
+          <div className="text-[10px] lg:text-xs tracking-[0.2em] uppercase text-primary/80">
             Crafted with precision in Portugal
           </div>
         </div>
