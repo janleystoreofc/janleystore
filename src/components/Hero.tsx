@@ -26,9 +26,9 @@ export function Hero() {
           </div>
 
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
-            Precisão que dá forma a <br />
-            <span className="text-gradient-gold italic">Realidade</span> com Impressão 3D
-            <span className="text-muted-foreground"> de Alta Precisão.</span>
+            Transformando ideias em&nbsp;<br />
+            <span className="text-gradient-gold italic">Realidade</span> com Impressão 3D<br />
+            <span className="text-muted-foreground"> de alta precisão.</span>
           </h1>
 
           <p className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
