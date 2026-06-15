@@ -10,7 +10,7 @@ export function Logo({ className = "" }: { className?: string }) {
       />
       <div className="flex flex-col leading-tight">
         <span className="font-display font-bold text-2xl md:text-3xl text-foreground tracking-tight">
-          JANLEY <span className="text-primary">STORE</span>
+          JANLEY STORE
         </span>
         <span className="text-[10px] md:text-xs uppercase tracking-[0.25em] text-muted-foreground">
           Impressão 3D
