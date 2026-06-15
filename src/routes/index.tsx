@@ -5,10 +5,10 @@ import { About } from "@/components/About";
 import { Catalog } from "@/components/Catalog";
 import { OrderForm } from "@/components/OrderForm";
 import { Process } from "@/components/Process";
-
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 import { WhatsappFloat } from "@/components/WhatsappFloat";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -47,6 +47,7 @@ function Index() {
         <Contact />
         <About />
       </main>
+      <Footer />
       <WhatsappFloat />
       <Toaster richColors theme="dark" position="bottom-center" />
     </div>
