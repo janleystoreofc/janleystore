@@ -58,7 +58,6 @@ export function Catalog() {
                 className="pl-10 bg-input/40 border-border"
               />
             </div>
-            <Select label="Cor" value={color} onChange={setColor} options={colors} />
             <Select label="Material" value={material} onChange={setMaterial} options={materials} />
             <div className="flex items-center gap-3 min-w-[180px]">
               <span className="text-xs text-muted-foreground uppercase tracking-wider">Preço</span>
