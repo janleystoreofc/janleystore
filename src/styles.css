@@ -30,7 +30,7 @@
   --color-ring: var(--ring);
   --color-gold: var(--gold);
   --color-copper: var(--copper);
-  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-display: Arial, Helvetica, sans-serif;
   --font-sans: "Playfair Display", "Times New Roman", serif;
 }
 
