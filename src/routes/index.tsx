@@ -42,7 +42,6 @@ function Index() {
         <Catalog />
         <OrderForm />
         <Process />
-        <Testimonials />
         <FAQ />
         <Contact />
         <About />
