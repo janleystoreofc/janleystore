@@ -90,7 +90,7 @@ export function Contact() {
       <footer className="container mx-auto px-4 lg:px-6 mt-16 lg:mt-32 pt-6 lg:pt-10 border-t border-border/40">
         <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs lg:text-sm text-muted-foreground">
           <div className="flex items-center gap-2 lg:gap-3">
-            <Logo className="h-6 w-6 lg:h-8 lg:w-8" />
+            <Logo className="h-6 w-6 lg:h-8 lg:w-8" hideText />
             <span>© {new Date().getFullYear()} JANLEY 3D · Todos os direitos reservados</span>
           </div>
           <div className="text-[10px] lg:text-xs tracking-[0.2em] uppercase text-primary/80">
