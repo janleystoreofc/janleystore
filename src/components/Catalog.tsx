@@ -72,9 +72,6 @@ export function Catalog() {
               />
               <span className="text-sm text-primary w-12 text-right">€{maxPrice}</span>
             </div>
-            <div className="text-sm text-muted-foreground text-right">
-              {filtered.length} {filtered.length === 1 ? "peça" : "peças"}
-            </div>
           </div>
 
           <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-border/40">
