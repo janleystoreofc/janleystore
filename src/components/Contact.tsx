@@ -40,7 +40,7 @@ export function Contact() {
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground font-bold">Email</div>
                   <div className="font-medium">janleystorebr@gmail.com</div>
                 </div>
               </a>
