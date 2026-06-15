@@ -47,6 +47,7 @@ function Index() {
         <Contact />
         <About />
       </main>
+      <Footer />
       <WhatsappFloat />
       <Toaster richColors theme="dark" position="bottom-center" />
     </div>
