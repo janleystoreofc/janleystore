@@ -46,16 +46,7 @@ export function Catalog() {
 
         {/* Filters */}
         <div className="glass rounded-2xl p-6 mb-10">
-          <div className="grid lg:grid-cols-[1fr_auto_auto_auto_1fr] gap-4 items-center">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                placeholder="Pesquisar produtos…"
-                value={q}
-                onChange={(e) => setQ(e.target.value)}
-                className="pl-10 bg-input/40 border-border"
-              />
-            </div>
+          <div className="flex flex-wrap gap-4 items-center">
             <Select label="Material" value={material} onChange={setMaterial} options={materials} />
             <div className="flex items-center gap-3 min-w-[180px]">
               <span className="text-xs text-muted-foreground uppercase tracking-wider">Preço</span>
