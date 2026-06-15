@@ -50,7 +50,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground">Localização</div>
-                  <div className="font-medium text-sm lg:text-base">Portugal · Envios para todo o país</div>
+                  <div className="font-medium text-sm lg:text-base">Guimarães, Braga - Portugal</div>
                 </div>
               </div>
               <div className="flex gap-3 pt-2 lg:pt-4">
