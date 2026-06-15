@@ -8,7 +8,7 @@ export function Logo({ className = "" }: { className?: string }) {
         alt="Girassol JANLEY STORE"
         className="h-16 md:h-20 w-auto drop-shadow-md"
       />
-      <div className="flex flex-col leading-tight">
+      <div className="flex items-center gap-2 leading-tight">
         <span className="font-display font-bold text-2xl md:text-3xl text-foreground tracking-tight">
           JANLEY STORE
         </span>
