@@ -1,7 +1,11 @@
+import logoAsset from "@/assets/janley-logo.png.asset.json";
+
 export function Logo({ className = "" }: { className?: string }) {
   return (
-    <span className={`font-display font-bold text-xl text-foreground whitespace-nowrap ${className}`}>
-      <br />
-    </span>
+    <img
+      src={logoAsset.url}
+      alt="JANLEY STORE - Impressão 3D"
+      className={`h-12 w-auto ${className}`}
+    />
   );
 }
