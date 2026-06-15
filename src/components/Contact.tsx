@@ -67,7 +67,7 @@ export function Contact() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-accent flex items-center justify-center hover:opacity-90 transition-all"
+                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-[#3E2723] flex items-center justify-center hover:opacity-90 transition-all"
                   aria-label="Facebook"
                 >
                   <Facebook className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
