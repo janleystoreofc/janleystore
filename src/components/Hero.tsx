@@ -77,9 +77,6 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs text-muted-foreground tracking-[0.3em] uppercase animate-pulse">
-        Scroll
-      </div>
     </section>
   );
 }
