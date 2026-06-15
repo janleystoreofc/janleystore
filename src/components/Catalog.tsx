@@ -1,28 +1,11 @@
-import { useMemo, useState } from "react";
-import { products, categories, colors, materials, type Product } from "@/data/products";
+import { products, type Product } from "@/data/products";
 import { Button } from "./ui/button";
 import { Plus } from "lucide-react";
 
 const WA = "351900000000";
 
 export function Catalog() {
-  const [cat, setCat] = useState<string>("Todos");
-  const [color, setColor] = useState("Todos");
-  const [material, setMaterial] = useState("Todos");
-  const [maxPrice, setMaxPrice] = useState(100);
-  
-
-  const filtered = useMemo(
-    () =>
-      products.filter(
-        (p) =>
-          (cat === "Todos" || p.category === cat) &&
-          (color === "Todos" || p.color === color) &&
-          (material === "Todos" || p.material === material) &&
-          p.price <= maxPrice,
-      ),
-    [cat, color, material, maxPrice],
-  );
+  const filtered = products;
 
   const order = (p: Product) => {
     const text = encodeURIComponent(
