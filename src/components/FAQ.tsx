@@ -12,23 +12,23 @@ const faqs = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section id="faq" className="py-32 relative">
+    <section id="faq" className="py-16 lg:py-24 relative">
       <div className="container mx-auto px-6 max-w-3xl">
-        <div className="text-center mb-16">
-          <div className="text-xs tracking-[0.3em] uppercase text-primary mb-5">— FAQ</div>
-          <h2 className="font-display text-5xl md:text-6xl">
+        <div className="text-center mb-8 lg:mb-16">
+          <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 lg:mb-5">— FAQ</div>
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl">
             Perguntas <span className="text-gradient-gold italic">frequentes</span>
           </h2>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-2 lg:space-y-3">
           {faqs.map((f, i) => (
             <div key={i} className="glass rounded-xl overflow-hidden">
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors"
+                className="w-full flex items-center justify-between p-4 lg:p-6 text-left hover:bg-primary/5 transition-colors"
               >
-                <span className="font-display text-lg pr-4">{f.q}</span>
+                <span className="font-display text-base lg:text-lg pr-4">{f.q}</span>
                 <Plus
                   className={`h-5 w-5 text-primary shrink-0 transition-transform ${
                     open === i ? "rotate-45" : ""
@@ -41,7 +41,7 @@ export function FAQ() {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <p className="px-6 pb-6 text-muted-foreground leading-relaxed">{f.a}</p>
+                  <p className="px-4 pb-4 lg:px-6 lg:pb-6 text-muted-foreground leading-relaxed text-sm lg:text-base">{f.a}</p>
                 </div>
               </div>
             </div>
