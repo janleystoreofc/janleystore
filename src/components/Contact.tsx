@@ -61,7 +61,7 @@ export function Contact() {
                   className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-accent flex items-center justify-center hover:opacity-90 transition-all"
                   aria-label="Instagram"
                 >
-                  <Instagram className="h-4 w-4 lg:h-5 lg:w-5 text-gold" />
+                  <Instagram className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                 </a>
                 <a
                   href="https://facebook.com"
