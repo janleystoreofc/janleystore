@@ -3,7 +3,7 @@ import heroImg from "@/assets/hero-printer.jpg";
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center pt-16 sm:pt-24 overflow-hidden">
+    <section id="top" className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center pt-24 sm:pt-32 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src={heroImg}
