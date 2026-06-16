@@ -15,7 +15,7 @@ export function FAQ() {
     <section id="faq" className="py-16 lg:py-24 relative">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="text-center mb-8 lg:mb-16">
-          <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 lg:mb-5">— FAQ</div>
+          <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 lg:mb-5 font-bold">— FAQ</div>
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl">
             Perguntas <span className="text-gradient-gold italic">frequentes</span>
           </h2>
