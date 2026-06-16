@@ -53,26 +53,6 @@ export function Contact() {
                   <div className="font-medium text-sm lg:text-base">Guimarães, Braga - Portugal</div>
                 </div>
               </div>
-              <div className="flex gap-3 pt-2 lg:pt-4">
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-orange-500 flex items-center justify-center hover:opacity-90 transition-all"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
-                </a>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-orange-500 flex items-center justify-center hover:opacity-90 transition-all"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
-                </a>
-              </div>
             </div>
           </div>
 
