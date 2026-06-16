@@ -112,3 +112,8 @@
   100% { background-position: 200% 0; }
 }
 .animate-fade-up { animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+.icon-gradient svg {
+  stroke: url(#orange-gold) !important;
+  fill: url(#orange-gold) !important;
+}
