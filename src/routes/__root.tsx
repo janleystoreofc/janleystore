@@ -121,6 +121,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <linearGradient id="orange-gold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="oklch(0.82 0.17 82)" />
+            <stop offset="100%" stopColor="oklch(0.65 0.18 50)" />
+          </linearGradient>
+        </defs>
+      </svg>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
