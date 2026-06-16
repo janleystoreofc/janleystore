@@ -22,7 +22,9 @@ export function Testimonials() {
             <div key={x.name} className="glass rounded-2xl p-3 sm:p-6 lg:p-8 hover:border-primary/40 transition-all hover:-translate-y-1">
               <div className="flex gap-0.5 mb-2 sm:mb-4">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-2 w-2 sm:h-4 sm:w-4 fill-primary text-primary" />
+                  <span className="icon-gradient" key={i}>
+                    <Star className="h-2 w-2 sm:h-4 sm:w-4 fill-primary text-primary" />
+                  </span>
                 ))}
               </div>
               <p className="text-foreground/90 leading-relaxed mb-3 sm:mb-5 italic font-display text-xs sm:text-base lg:text-lg">

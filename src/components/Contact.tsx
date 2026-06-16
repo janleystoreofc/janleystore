@@ -24,7 +24,7 @@ export function Contact() {
                 rel="noreferrer"
                 className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4 hover:border-primary/40 transition-all group"
               >
-                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-orange-500 flex items-center justify-center shrink-0">
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-orange-500 flex items-center justify-center shrink-0 icon-gradient">
                   <MessageCircle className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                 </div>
                 <div>
@@ -36,7 +36,7 @@ export function Contact() {
                 href="mailto:janleystorebr@gmail.com"
                 className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4 hover:border-primary/40 transition-all"
               >
-                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-orange-500 flex items-center justify-center shrink-0">
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-orange-500 flex items-center justify-center shrink-0 icon-gradient">
                   <Mail className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                 </div>
                 <div>
@@ -45,7 +45,7 @@ export function Contact() {
                 </div>
               </a>
               <div className="glass rounded-xl p-3 lg:p-5 flex items-center gap-3 lg:gap-4">
-                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-orange-500 flex items-center justify-center shrink-0">
+                <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-orange-500 flex items-center justify-center shrink-0 icon-gradient">
                   <MapPin className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                 </div>
                 <div>
@@ -70,7 +70,7 @@ export function Contact() {
               href="https://instagram.com"
               target="_blank"
               rel="noreferrer"
-              className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-orange-500 flex items-center justify-center hover:opacity-90 transition-all"
+              className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-orange-500 flex items-center justify-center hover:opacity-90 transition-all icon-gradient"
               aria-label="Instagram"
             >
               <Instagram className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
@@ -79,7 +79,7 @@ export function Contact() {
               href="https://facebook.com"
               target="_blank"
               rel="noreferrer"
-              className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-orange-500 flex items-center justify-center hover:opacity-90 transition-all"
+              className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-orange-500 flex items-center justify-center hover:opacity-90 transition-all icon-gradient"
               aria-label="Facebook"
             >
               <Facebook className="h-4 w-4 lg:h-5 lg:w-5 text-white" />

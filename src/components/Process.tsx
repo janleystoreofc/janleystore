@@ -23,7 +23,9 @@ export function Process() {
             <div key={s.n} className="relative group">
               <div className="glass rounded-2xl p-4 lg:p-8 h-full hover:border-primary/50 transition-all hover:-translate-y-2 duration-500">
                 <div className="font-display text-4xl lg:text-7xl text-primary/20 leading-none mb-2 lg:mb-4">{s.n}</div>
-                <s.icon className="h-5 w-5 lg:h-7 lg:w-7 text-primary mb-2 lg:mb-4" />
+                <span className="icon-gradient">
+                  <s.icon className="h-5 w-5 lg:h-7 lg:w-7 text-primary mb-2 lg:mb-4" />
+                </span>
                 <h3 className="font-display text-lg lg:text-2xl mb-1 lg:mb-2">{s.title}</h3>
                 <p className="text-xs lg:text-sm text-muted-foreground">{s.d}</p>
               </div>

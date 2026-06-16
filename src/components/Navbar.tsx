@@ -55,7 +55,7 @@ export function Navbar() {
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
-          {open ? <X /> : <Menu />}
+          <span className="icon-gradient">{open ? <X /> : <Menu />}</span>
         </button>
       </div>
 
