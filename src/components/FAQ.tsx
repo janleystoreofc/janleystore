@@ -29,11 +29,13 @@ export function FAQ() {
                 className="w-full flex items-center justify-between p-4 lg:p-6 text-left hover:bg-primary/5 transition-colors"
               >
                 <span className="font-display text-base lg:text-lg pr-4">{f.q}</span>
-                <Plus
-                  className={`h-5 w-5 text-primary shrink-0 transition-transform ${
-                    open === i ? "rotate-45" : ""
-                  }`}
-                />
+                <span className="icon-gradient">
+                  <Plus
+                    className={`h-5 w-5 text-primary shrink-0 transition-transform ${
+                      open === i ? "rotate-45" : ""
+                    }`}
+                  />
+                </span>
               </button>
               <div
                 className={`grid transition-all duration-500 ${
