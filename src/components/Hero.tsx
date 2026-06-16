@@ -53,11 +53,6 @@ export function Hero() {
             </div>
             <div className="hidden sm:block h-10 w-px bg-border" />
             <div>
-              <div className="font-display text-2xl sm:text-3xl text-primary">3 dias</div>
-              <div className="text-[10px] sm:text-xs tracking-wider uppercase">ENVIAMOS EM ATÉ</div>
-            </div>
-            <div className="hidden sm:block h-10 w-px bg-border" />
-            <div>
               <div className="font-display text-2xl sm:text-3xl text-primary">24h</div>
               <div className="text-[10px] sm:text-xs tracking-wider uppercase">RESPOSTAS DE ORÇAMENTO&nbsp;</div>
             </div>
