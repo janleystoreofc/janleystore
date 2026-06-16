@@ -16,8 +16,8 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 grid grid-cols-12 gap-4 lg:gap-10 items-center">
-        <div className="col-span-12 lg:col-span-7 animate-fade-up">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-3xl animate-fade-up">
           <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1 sm:px-4 sm:py-1.5 mb-4 sm:mb-8">
             <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
             <span className="text-[10px] sm:text-xs tracking-[0.25em] text-accent uppercase">
@@ -61,18 +61,6 @@ export function Hero() {
               <div className="font-display text-2xl sm:text-3xl text-primary">24h</div>
               <div className="text-[10px] sm:text-xs tracking-wider uppercase">RESPOSTAS DE ORÇAMENTO&nbsp;</div>
             </div>
-          </div>
-        </div>
-
-        <div className="col-span-4 lg:col-span-5 animate-fade-up [animation-delay:200ms]">
-          <div className="relative aspect-square glass rounded-2xl p-2 md:p-4 lg:p-8 flex items-center justify-center">
-            <img
-              src={heroImg}
-              alt="Impressora 3D em funcionamento"
-              className="rounded-xl object-cover w-full h-full"
-              width={800}
-              height={800}
-            />
           </div>
         </div>
       </div>
