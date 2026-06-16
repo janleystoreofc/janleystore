@@ -12,7 +12,7 @@ export function Process() {
     <section id="processo" className="py-16 lg:py-24 relative">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-10 lg:mb-16">
-          <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 lg:mb-5">— Processo</div>
+          <div className="text-xs tracking-[0.3em] uppercase text-primary mb-3 lg:mb-5 font-bold">— Processo</div>
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl">
             Simples. <span className="text-gradient-gold italic">Refinado.</span>
           </h2>
