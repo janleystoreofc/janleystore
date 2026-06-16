@@ -43,7 +43,7 @@ export function OrderForm() {
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-[1.05]">
               Tem um <span className="text-gradient-gold italic">projeto</span> em mente?
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground text-sm mb-8">
               Envie-nos os detalhes ou os seus ficheiros e receba um orçamento
               personalizado em até 48h.
             </p>
