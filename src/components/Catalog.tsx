@@ -28,7 +28,7 @@ export function Catalog() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-4 gap-3">
           {filtered.map((p) => (
             <article
               key={p.id}
