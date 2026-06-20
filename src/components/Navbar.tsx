@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { Logo } from "./Logo";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Facebook, Phone } from "lucide-react";
 import { Button } from "./ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
