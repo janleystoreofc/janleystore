@@ -100,9 +100,21 @@ export function Navbar() {
                 {l.label}
               </a>
             ))}
-            <Button variant="hero" asChild>
-              <a href="#encomenda" onClick={() => setOpen(false)}>Redes sociais</a>
-            </Button>
+            <div className="flex flex-col gap-2">
+              <span className="text-xs text-muted-foreground uppercase tracking-wider">Redes sociais</span>
+              <a href="https://instagram.com/janleystoreofc" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="flex items-center gap-2 text-foreground/80 hover:text-primary py-2">
+                <Instagram className="h-4 w-4" />
+                <span>@janleystoreofc</span>
+              </a>
+              <a href="https://facebook.com/janleystorebr" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="flex items-center gap-2 text-foreground/80 hover:text-primary py-2">
+                <Facebook className="h-4 w-4" />
+                <span>@janleystorebr</span>
+              </a>
+              <a href="tel:+5511999999999" onClick={() => setOpen(false)} className="flex items-center gap-2 text-foreground/80 hover:text-primary py-2">
+                <Phone className="h-4 w-4" />
+                <span>Telefone</span>
+              </a>
+            </div>
           </div>
         </div>
       )}
