@@ -51,11 +51,11 @@ export function Navbar() {
         </div>
 
         <button
-          className="lg:hidden text-foreground p-2"
+          className="lg:hidden text-accent p-2"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
-          <span className="icon-gradient">{open ? <X /> : <Menu />}</span>
+          <span>{open ? <X /> : <Menu />}</span>
         </button>
       </div>
 
