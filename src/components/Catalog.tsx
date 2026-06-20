@@ -28,11 +28,11 @@ export function Catalog() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-2">
           {filtered.map((p) => (
             <article
               key={p.id}
-              className="group glass rounded-xl overflow-hidden hover:border-primary/40 transition-all hover:-translate-y-1"
+              className="group glass rounded-lg overflow-hidden hover:border-primary/40 transition-all hover:-translate-y-1"
             >
               <div className="relative aspect-square overflow-hidden bg-secondary/40">
                 <img
@@ -43,22 +43,22 @@ export function Catalog() {
                   height={400}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute top-3 left-3 glass px-3 py-1 rounded-full text-[10px] tracking-widest uppercase text-primary">
+                <div className="absolute top-1.5 left-1.5 glass px-2 py-0.5 rounded-full text-[8px] tracking-widest uppercase text-primary">
                   {p.category}
                 </div>
               </div>
-              <div className="p-3 md:p-4">
-                <h3 className="font-display text-xs md:text-sm leading-tight mb-1">{p.name}</h3>
-                <p className="text-[11px] text-muted-foreground mb-2 line-clamp-2">{p.desc}</p>
+              <div className="p-2">
+                <h3 className="font-display text-[10px] md:text-xs leading-tight mb-0.5 truncate">{p.name}</h3>
+                <p className="hidden md:block text-[10px] text-muted-foreground mb-1 line-clamp-1">{p.desc}</p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                    <div className="text-[8px] text-muted-foreground uppercase tracking-wider">
                       Desde
                     </div>
-                    <div className="font-display text-lg md:text-xl text-gradient-gold">€{p.price}</div>
+                    <div className="font-display text-sm md:text-base text-gradient-gold">€{p.price}</div>
                   </div>
-                  <Button size="icon" variant="hero" className="h-8 w-8" onClick={() => order(p)} title="Encomendar">
-                    <Plus className="h-3.5 w-3.5" />
+                  <Button size="icon" variant="hero" className="h-6 w-6 md:h-8 md:w-8" onClick={() => order(p)} title="Encomendar">
+                    <Plus className="h-3 w-3 md:h-3.5 md:w-3.5" />
                   </Button>
                 </div>
               </div>
