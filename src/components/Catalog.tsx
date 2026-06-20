@@ -47,18 +47,18 @@ export function Catalog() {
                   {p.category}
                 </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-display text-sm md:text-base leading-tight mb-1">{p.name}</h3>
-                <p className="text-xs text-muted-foreground mb-4 line-clamp-2">{p.desc}</p>
+              <div className="p-3 md:p-4">
+                <h3 className="font-display text-xs md:text-sm leading-tight mb-1">{p.name}</h3>
+                <p className="text-[11px] text-muted-foreground mb-2 line-clamp-2">{p.desc}</p>
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-[10px] text-muted-foreground uppercase tracking-wider">
                       Desde
                     </div>
-                    <div className="font-display text-2xl text-gradient-gold">€{p.price}</div>
+                    <div className="font-display text-lg md:text-xl text-gradient-gold">€{p.price}</div>
                   </div>
-                  <Button size="icon" variant="hero" onClick={() => order(p)} title="Encomendar">
-                    <Plus className="h-4 w-4" />
+                  <Button size="icon" variant="hero" className="h-8 w-8" onClick={() => order(p)} title="Encomendar">
+                    <Plus className="h-3.5 w-3.5" />
                   </Button>
                 </div>
               </div>
