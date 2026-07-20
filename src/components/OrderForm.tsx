@@ -5,7 +5,7 @@ import { Textarea } from "./ui/textarea";
 import { Upload, Send, FileBox } from "lucide-react";
 import { toast } from "sonner";
 
-const WA = "351900000000";
+const WA = "351910761658";
 
 export function OrderForm() {
   const [files, setFiles] = useState<File[]>([]);
@@ -51,7 +51,7 @@ export function OrderForm() {
               <FileBox className="h-6 w-6 text-primary mb-3" />
               <h3 className="font-display text-lg mb-2">Impressão Personalizada</h3>
               <p className="text-sm text-muted-foreground">
-                Aceitamos ficheiros STL, OBJ, STEP e imagens de referência. Análise técnica
+                Aceitamos ficheiros ou imagens de referência. Análise técnica
                 incluída em todos os pedidos.
               </p>
             </div>
