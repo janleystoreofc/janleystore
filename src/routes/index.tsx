@@ -11,6 +11,9 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { WhatsappFloat } from "@/components/WhatsappFloat";
 import { Toaster } from "@/components/ui/sonner";
+import { CartProvider } from "@/components/cart/CartContext";
+import { CartDrawer } from "@/components/cart/CartDrawer";
+import { CartFab } from "@/components/cart/CartFab";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,21 +37,25 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <Navbar />
-      <main>
-        <Hero />
-        <div className="hairline max-w-5xl mx-auto" />
-        <Catalog />
-        <OrderForm />
-        <Process />
-        <FAQ />
-        <Contact />
-        <About />
-      </main>
-      <Footer />
-      <WhatsappFloat />
-      <Toaster richColors theme="dark" position="bottom-center" />
-    </div>
+    <CartProvider>
+      <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        <Navbar />
+        <main>
+          <Hero />
+          <div className="hairline max-w-5xl mx-auto" />
+          <Catalog />
+          <OrderForm />
+          <Process />
+          <FAQ />
+          <Contact />
+          <About />
+        </main>
+        <Footer />
+        <WhatsappFloat />
+        <CartFab />
+        <CartDrawer />
+        <Toaster richColors theme="dark" position="bottom-center" />
+      </div>
+    </CartProvider>
   );
 }
