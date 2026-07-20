@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 
 const faqs = [
-  { q: "Quanto tempo demora uma encomenda?", a: "Em média 3 a 7 dias úteis, dependendo da complexidade e quantidade. Para peças personalizadas, indicamos o prazo no orçamento." },
+  { q: "Quanto tempo demora uma encomenda?", a: "Em média 2 a 7 dias úteis, dependendo da complexidade e quantidade. Para peças personalizadas, indicamos o prazo no orçamento." },
   { q: "Que materiais utilizam?", a: "Trabalhamos com PLA, PETG, TPU em diversas cores e acabamentos." },
   { q: "Fazem projetos personalizados?", a: "Sim. Aceitamos ficheiros STL, OBJ e STEP, ou desenvolvemos o seu projeto de raiz a partir de uma ideia." },
   { q: "Enviam para todo Portugal?", a: "Sim, fazemos envios para Portugal continental e ilhas através de transportadoras de confiança." },
