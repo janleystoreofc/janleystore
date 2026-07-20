@@ -1,16 +1,11 @@
 import { products, type Product } from "@/data/products";
 import { Button } from "./ui/button";
 import { Plus } from "lucide-react";
-
-const WA = "351900000000";
+import { useCart } from "./cart/CartContext";
 
 export function Catalog() {
-  const order = (p: Product) => {
-    const text = encodeURIComponent(
-      `Olá JANLEY 3D! Tenho interesse em encomendar: ${p.name} (${p.color}, ${p.material}) — €${p.price}`,
-    );
-    window.open(`https://wa.me/${WA}?text=${text}`, "_blank");
-  };
+  const { add } = useCart();
+  const order = (p: Product) => add(p, 1);
 
   // Agrupar produtos por categoria preservando a ordem de aparição
   const grouped = products.reduce<Record<string, Product[]>>((acc, p) => {
