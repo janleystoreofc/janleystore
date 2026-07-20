@@ -67,7 +67,7 @@ export function Contact() {
 
           <div className="flex gap-3 pt-2 lg:pt-4 lg:col-start-2">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/janleystoreofc"
               target="_blank"
               rel="noreferrer"
               className="h-9 w-9 lg:h-11 lg:w-11 rounded-lg bg-gradient-orange-yellow flex items-center justify-center hover:opacity-90 transition-all"
