@@ -1,7 +1,7 @@
 import { Mail, MapPin, MessageCircle, Instagram, Facebook } from "lucide-react";
 import { Logo } from "./Logo";
 
-const WA = "351900000000";
+const WA = "351910761658";
 
 export function Contact() {
   return (
@@ -29,7 +29,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground font-bold">WhatsApp</div>
-                  <div className="font-medium text-sm lg:text-base">+351 900 000 000</div>
+                  <div className="font-medium text-sm lg:text-base">+351 910 761 658</div>
                 </div>
               </a>
               <a
