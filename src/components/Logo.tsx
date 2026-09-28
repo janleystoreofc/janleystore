@@ -1,10 +1,10 @@
-import sunflowerAsset from "@/assets/girassol.png.asset.json";
+import janleyLogo from "@/assets/janley-logo.png";
 
 export function Logo({ className = "", hideText = false }: { className?: string; hideText?: boolean }) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <img
-        src={sunflowerAsset.url}
+        src={janleyLogo}
         alt="Girassol JANLEY STORE"
         className="h-16 md:h-20 w-auto drop-shadow-md"
       />
