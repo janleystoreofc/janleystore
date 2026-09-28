@@ -46,3 +46,35 @@ export const products: Product[] = [
   { id: "p14", name: "Logótipo Empresarial", category: "Personalizados", price: 60, color: "Cobre", material: "PLA", image: catCustom, desc: "Logo da sua empresa em alta definição." },
   { id: "p15", name: "Brinde Corporativo", category: "Personalizados", price: 18, color: "Preto", material: "PLA", image: catCustom, desc: "Brindes personalizados em quantidade." },
 ];
+
+// Produtos adicionais gerados para completar cada categoria (50+ por categoria)
+const extraNames: Record<string, { image: string; bases: string[] }> = {
+  "Organização": { image: catOrg, bases: ["Organizador", "Suporte", "Caixa Modular", "Porta-canetas", "Divisória", "Bandeja", "Porta-cabos", "Gaveta"] },
+  "Decoração": { image: catDecor, bases: ["Vaso", "Escultura", "Luminária", "Quadro 3D", "Castiçal", "Porta-retratos", "Mandala", "Figura"] },
+  "Casa": { image: catHome, bases: ["Gancho", "Porta-chaves", "Copo", "Porta-copos", "Suporte de Cozinha", "Porta-escovas", "Chaveiro", "Cabide"] },
+  "Escritório": { image: catOffice, bases: ["Suporte Laptop", "Porta-cartões", "Organizador Pro", "Suporte Monitor", "Clip de Cabos", "Placa de Mesa", "Porta-post-it", "Apoio de Pulso"] },
+  "Gaming": { image: catGaming, bases: ["Suporte Headset", "Expositor Comandos", "Suporte Consola", "Miniatura", "Porta-jogos", "Letreiro Gamer", "Suporte Telemóvel Gamer", "Troféu"] },
+  "Personalizados": { image: catCustom, bases: ["Letreiro", "Nome 3D", "Logótipo", "Chaveiro Personalizado", "Brinde", "Placa", "Topo de Bolo", "Medalha"] },
+};
+const variants = ["Classic", "Mini", "Pro", "Onyx", "Wave", "Luxe", "Nordic", "Hexa"];
+
+let extraId = 100;
+for (const [category, { image, bases }] of Object.entries(extraNames)) {
+  const existing = products.filter((p) => p.category === category).length;
+  for (let i = 0; products.filter((p) => p.category === category).length < 52; i++) {
+    const base = bases[i % bases.length];
+    const variant = variants[Math.floor(i / bases.length) % variants.length];
+    const color = colors[1 + (i % (colors.length - 1))];
+    const material = ["PLA", "PETG", "TPU"][i % 3];
+    products.push({
+      id: `p${extraId++}`,
+      name: `${base} ${variant}`,
+      category,
+      price: 8 + ((i * 7 + existing * 3) % 45),
+      color,
+      material,
+      image,
+      desc: `${base} ${variant} impresso em ${material}, cor ${color.toLowerCase()}.`,
+    });
+  }
+}
