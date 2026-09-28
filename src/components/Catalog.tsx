@@ -2,10 +2,13 @@ import { products, type Product } from "@/data/products";
 import { Button } from "./ui/button";
 import { Plus } from "lucide-react";
 import { useCart } from "./cart/CartContext";
+import { useState } from "react";
 
 export function Catalog() {
   const { add } = useCart();
   const order = (p: Product) => add(p, 1);
+  const [open, setOpen] = useState<Record<string, boolean>>({});
+  const FEATURED = 6;
 
   // Agrupar produtos por categoria preservando a ordem de aparição
   const grouped = products.reduce<Record<string, Product[]>>((acc, p) => {
@@ -41,7 +44,7 @@ export function Catalog() {
               </div>
 
               <div className="grid grid-cols-3 gap-2">
-                {grouped[category].map((p) => (
+                {(open[category] ? grouped[category] : grouped[category].slice(0, FEATURED)).map((p) => (
                   <article
                     key={p.id}
                     className="group glass rounded-lg overflow-hidden hover:border-primary/40 transition-all hover:-translate-y-1"
@@ -74,6 +77,13 @@ export function Catalog() {
                   </article>
                 ))}
               </div>
+              {grouped[category].length > FEATURED && (
+                <div className="text-center mt-6">
+                  <Button variant="outline" size="sm" onClick={() => setOpen((o) => ({ ...o, [category]: !o[category] }))}>
+                    {open[category] ? "Ver menos" : `Ver mais (${grouped[category].length - FEATURED})`}
+                  </Button>
+                </div>
+              )}
             </div>
           ))}
         </div>
