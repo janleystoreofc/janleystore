@@ -1,0 +1,74 @@
+
+export type ProductData = {
+  id: string;
+  name: string;
+  category: string;
+  price: number;
+  color: string;
+  material: string;
+  image: string;
+  desc: string;
+};
+
+export const categories = [
+  "Todos",
+  "Organização",
+  "Decoração",
+  "Casa",
+  "Escritório",
+  "Gaming",
+  "Personalizados",
+] as const;
+
+export const colors = ["Todos", "Preto", "Branco", "Cinza", "Dourado", "Cobre"];
+export const materials = ["Todos", "PLA", "PETG", "ABS", "Resina"];
+
+export const productData: ProductData[] = [
+  { id: "p1", name: "Organizador de Secretária Premium", category: "Organização", price: 24, color: "Preto", material: "PETG", image: "catOrg", desc: "Organizador modular em PETG com acabamento mate." },
+  { id: "p2", name: "Suporte Telemóvel Geométrico", category: "Organização", price: 14, color: "Preto", material: "PLA", image: "catOrg", desc: "Suporte minimalista para mesa." },
+  { id: "p3", name: "Organizador de Cabos", category: "Organização", price: 9, color: "Cinza", material: "PLA", image: "catOrg", desc: "Mantém os cabos arrumados com elegância." },
+  { id: "p4", name: "Vaso Facetado Onyx", category: "Decoração", price: 32, color: "Preto", material: "PLA", image: "catDecor", desc: "Vaso geométrico de design exclusivo." },
+  { id: "p5", name: "Luminária Lithophane", category: "Decoração", price: 45, color: "Branco", material: "PLA", image: "catDecor", desc: "Luminária com efeito de luz suave." },
+  { id: "p6", name: "Escultura Wave", category: "Decoração", price: 38, color: "Dourado", material: "PLA", image: "catDecor", desc: "Peça escultural contemporânea." },
+  { id: "p7", name: "Ganchos Modulares (x3)", category: "Casa", price: 12, color: "Preto", material: "PETG", image: "catHome", desc: "Set de 3 ganchos premium." },
+  { id: "p8", name: "Porta-chaves Personalizado", category: "Casa", price: 8, color: "Preto", material: "PLA", image: "catHome", desc: "Personalizável com nome ou logótipo." },
+  { id: "p9", name: "Suporte Laptop Inclinado", category: "Escritório", price: 35, color: "Preto", material: "PETG", image: "catOffice", desc: "Ergonomia e estilo premium." },
+  { id: "p10", name: "Organizador de Secretária Pro", category: "Escritório", price: 28, color: "Cinza", material: "PETG", image: "catOffice", desc: "Solução completa para a sua mesa." },
+  { id: "p11", name: "Suporte Headset", category: "Gaming", price: 22, color: "Preto", material: "PLA", image: "catGaming", desc: "Suporte vertical para headset." },
+  { id: "p12", name: "Expositor de Comandos", category: "Gaming", price: 26, color: "Preto", material: "PLA", image: "catGaming", desc: "Display elegante para até 2 comandos." },
+  { id: "p13", name: "Nome em 3D Premium", category: "Personalizados", price: 30, color: "Dourado", material: "PLA", image: "catCustom", desc: "Nome ou palavra em 3D com acabamento metálico." },
+  { id: "p14", name: "Logótipo Empresarial", category: "Personalizados", price: 60, color: "Cobre", material: "PLA", image: "catCustom", desc: "Logo da sua empresa em alta definição." },
+  { id: "p15", name: "Brinde Corporativo", category: "Personalizados", price: 18, color: "Preto", material: "PLA", image: "catCustom", desc: "Brindes personalizados em quantidade." },
+];
+
+// Produtos adicionais gerados para completar cada categoria (50+ por categoria)
+const extraNames: Record<string, { image: string; bases: string[] }> = {
+  "Organização": { image: "catOrg", bases: ["Organizador", "Suporte", "Caixa Modular", "Porta-canetas", "Divisória", "Bandeja", "Porta-cabos", "Gaveta"] },
+  "Decoração": { image: "catDecor", bases: ["Vaso", "Escultura", "Luminária", "Quadro 3D", "Castiçal", "Porta-retratos", "Mandala", "Figura"] },
+  "Casa": { image: "catHome", bases: ["Gancho", "Porta-chaves", "Copo", "Porta-copos", "Suporte de Cozinha", "Porta-escovas", "Chaveiro", "Cabide"] },
+  "Escritório": { image: "catOffice", bases: ["Suporte Laptop", "Porta-cartões", "Organizador Pro", "Suporte Monitor", "Clip de Cabos", "Placa de Mesa", "Porta-post-it", "Apoio de Pulso"] },
+  "Gaming": { image: "catGaming", bases: ["Suporte Headset", "Expositor Comandos", "Suporte Consola", "Miniatura", "Porta-jogos", "Letreiro Gamer", "Suporte Telemóvel Gamer", "Troféu"] },
+  "Personalizados": { image: "catCustom", bases: ["Letreiro", "Nome 3D", "Logótipo", "Chaveiro Personalizado", "Brinde", "Placa", "Topo de Bolo", "Medalha"] },
+};
+const variants = ["Classic", "Mini", "Pro", "Onyx", "Wave", "Luxe", "Nordic", "Hexa"];
+
+let extraId = 100;
+for (const [category, { image, bases }] of Object.entries(extraNames)) {
+  const existing = productData.filter((p) => p.category === category).length;
+  for (let i = 0; productData.filter((p) => p.category === category).length < 52; i++) {
+    const base = bases[i % bases.length];
+    const variant = variants[Math.floor(i / bases.length) % variants.length];
+    const color = colors[1 + (i % (colors.length - 1))];
+    const material = ["PLA", "PETG", "TPU"][i % 3];
+    productData.push({
+      id: `p${extraId++}`,
+      name: `${base} ${variant}`,
+      category,
+      price: 8 + ((i * 7 + existing * 3) % 45),
+      color,
+      material,
+      image,
+      desc: `${base} ${variant} impresso em ${material}, cor ${color.toLowerCase()}.`,
+    });
+  }
+}
