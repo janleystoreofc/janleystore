@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "sdk_version": "3.0.4",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "site-janley-store",
+      "version": "0.1.0",
+      "title": "Site Janley Store"
+    },
+    "tools": [
+      {
+        "name": "list_products",
+        "title": "List products",
+        "description": "List JANLEY 3D catalog products, optionally filtered by category, search text or max price.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "category": {
+              "description": "Category name, e.g. Decoração, Gaming.",
+              "type": "string"
+            },
+            "search": {
+              "description": "Text to search in name or description.",
+              "type": "string"
+            },
+            "maxPrice": {
+              "description": "Maximum price in EUR.",
+              "type": "number"
+            },
+            "limit": {
+              "description": "Max results (default 20).",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          },
+          "additionalProperties": false
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_store_info",
+        "title": "Store info",
+        "description": "Get JANLEY 3D contacts, location, product categories and how to order.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
