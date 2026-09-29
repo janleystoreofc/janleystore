@@ -3,11 +3,13 @@ import { Button } from "./ui/button";
 import { Plus } from "lucide-react";
 import { useCart } from "./cart/CartContext";
 import { useState } from "react";
+import { ProductDialog } from "./ProductDialog";
 
 export function Catalog() {
   const { add } = useCart();
   const order = (p: Product) => add(p, 1);
   const [open, setOpen] = useState<Record<string, boolean>>({});
+  const [selected, setSelected] = useState<Product | null>(null);
   const FEATURED = 6;
 
   // Agrupar produtos por categoria preservando a ordem de aparição
@@ -49,7 +51,12 @@ export function Catalog() {
                     key={p.id}
                     className="group glass rounded-lg overflow-hidden hover:border-primary/40 transition-all hover:-translate-y-1"
                   >
-                    <div className="relative aspect-square overflow-hidden bg-secondary/40">
+                    <button
+                      type="button"
+                      onClick={() => setSelected(p)}
+                      className="relative block w-full aspect-square overflow-hidden bg-secondary/40 cursor-pointer"
+                      aria-label={`Ver detalhes de ${p.name}`}
+                    >
                       <img
                         src={p.image}
                         alt={p.name}
@@ -58,9 +65,14 @@ export function Catalog() {
                         height={400}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                    </div>
+                    </button>
                     <div className="p-2">
-                      <h4 className="font-display text-[10px] md:text-xs leading-tight mb-0.5 truncate">{p.name}</h4>
+                      <h4
+                        onClick={() => setSelected(p)}
+                        className="font-display text-[10px] md:text-xs leading-tight mb-0.5 truncate cursor-pointer hover:text-primary"
+                      >
+                        {p.name}
+                      </h4>
                       <p className="hidden md:block text-[10px] text-muted-foreground mb-1 line-clamp-1">{p.desc}</p>
                       <div className="flex items-center justify-between">
                         <div>
@@ -88,6 +100,7 @@ export function Catalog() {
           ))}
         </div>
       </div>
+      <ProductDialog product={selected} onClose={() => setSelected(null)} />
     </section>
   );
 }

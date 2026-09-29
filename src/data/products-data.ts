@@ -8,6 +8,8 @@ export type ProductData = {
   material: string;
   image: string;
   desc: string;
+  /** Fotos extra do produto (opcional) */
+  images?: string[];
 };
 
 export const categories = [
