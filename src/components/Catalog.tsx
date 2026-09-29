@@ -79,7 +79,7 @@ export function Catalog() {
               </div>
               {grouped[category].length > FEATURED && (
                 <div className="text-center mt-6">
-                  <Button variant="outline" size="sm" onClick={() => setOpen((o) => ({ ...o, [category]: !o[category] }))}>
+                  <Button variant="outline" size="sm" className="uppercase font-bold" onClick={() => setOpen((o) => ({ ...o, [category]: !o[category] }))}>
                     {open[category] ? "Ver menos" : `Ver mais (${grouped[category].length - FEATURED})`}
                   </Button>
                 </div>
