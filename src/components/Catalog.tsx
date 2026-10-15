@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { type Product } from "@/data/products";
+import { products, type Product } from "@/data/products";
 import { Button } from "./ui/button";
-import { Plus } from "lucide-react";
+import { Plus, Search } from "lucide-react";
 import { useCart } from "./cart/CartContext";
-import { useAllProducts } from "@/lib/product-service";
+import { useEffect, useState } from "react";
+import { buscarProdutos } from "@/lib/supabase/produtos";
 import { ProductDialog } from "./ProductDialog";
 
 export function Catalog() {
@@ -11,15 +11,42 @@ export function Catalog() {
   const order = (p: Product) => add(p, 1);
   const [open, setOpen] = useState<Record<string, boolean>>({});
   const [selected, setSelected] = useState<Product | null>(null);
+const [pesquisa, setPesquisa] = useState("");
   const FEATURED = 6;
-  const { items: todosProdutos } = useAllProducts();
+const [produtosSupabase, setProdutosSupabase] = useState<Product[]>([]);
+
+useEffect(() => {
+  async function carregarProdutos() {
+    const dados = await buscarProdutos();
+
+    const novosProdutos: Product[] = dados.map((p) => ({
+      id: `supabase-${p.id}`,
+      name: p.nome ?? "",
+      category: p.categoria ?? "Casa",
+      price: Number(p.preco ?? 0),
+      color: p.cor ?? "Não especificada",
+      material: "",
+      image: p.imagem_url ?? "",
+      desc: p.descricao ?? "",
+    }));
+
+    setProdutosSupabase(novosProdutos);
+  }
+
+  carregarProdutos();
+}, []);
+
+const todosProdutos = [...products, ...produtosSupabase];
+const produtosFiltrados = todosProdutos.filter((produto) =>
+  produto.name.toLowerCase().includes(pesquisa.toLowerCase().trim())
+);
 
   // Agrupar produtos por categoria preservando a ordem de aparição
-  const grouped = todosProdutos.reduce<Record<string, Product[]>>((acc, p) => {
+  const grouped = todosProdutosprodutosFiltrados.reduce<Record<string, Product[]>>((acc, p) => {
     (acc[p.category] ||= []).push(p);
     return acc;
   }, {});
-  const categoryOrder = Array.from(new Set(todosProdutos.map((p) => p.category)));
+  const categoryOrder = Array.from(new Set(todosProdutosprodutosFiltrados.map((p) => p.category)));
 
   return (
     <section id="catalogo" className="py-32 relative">
@@ -32,6 +59,18 @@ export function Catalog() {
           <p className="text-muted-foreground">
             Peças impressas com precisão milimétrica, prontas a encomendar.
           </p>
+        </div>
+        {/* Pesquisa de produtos */}
+        <div className="relative max-w-xl mx-auto mb-12">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-primary" />
+          <input
+            type="search"
+            placeholder="Pesquisar produtos..."
+            value={pesquisa}
+            onChange={(e) => setPesquisa(e.target.value)}
+            className="w-full bg-secondary/40 border border-border/40 rounded-lg py-4 pl-12 pr-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+            aria-label="Pesquisar produtos pelo nome"
+          />
         </div>
 
         {/* Seções por categoria */}
@@ -106,3 +145,4 @@ export function Catalog() {
     </section>
   );
 }
+
