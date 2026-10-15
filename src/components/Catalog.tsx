@@ -2,7 +2,8 @@ import { products, type Product } from "@/data/products";
 import { Button } from "./ui/button";
 import { Plus } from "lucide-react";
 import { useCart } from "./cart/CartContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { buscarProdutos } from "@/lib/supabase/produtos";
 import { ProductDialog } from "./ProductDialog";
 
 export function Catalog() {
@@ -11,13 +12,37 @@ export function Catalog() {
   const [open, setOpen] = useState<Record<string, boolean>>({});
   const [selected, setSelected] = useState<Product | null>(null);
   const FEATURED = 6;
+const [produtosSupabase, setProdutosSupabase] = useState<Product[]>([]);
+
+useEffect(() => {
+  async function carregarProdutos() {
+    const dados = await buscarProdutos();
+
+    const novosProdutos: Product[] = dados.map((p) => ({
+      id: `supabase-${p.id}`,
+      name: p.nome ?? "",
+      category: p.categoria ?? "Casa",
+      price: Number(p.preco ?? 0),
+      color: p.cor ?? "Não especificada",
+      material: "",
+      image: p.imagem_url ?? "",
+      desc: p.descricao ?? "",
+    }));
+
+    setProdutosSupabase(novosProdutos);
+  }
+
+  carregarProdutos();
+}, []);
+
+const todosProdutos = [...products, ...produtosSupabase];
 
   // Agrupar produtos por categoria preservando a ordem de aparição
-  const grouped = products.reduce<Record<string, Product[]>>((acc, p) => {
+  const grouped = todosProdutos.reduce<Record<string, Product[]>>((acc, p) => {
     (acc[p.category] ||= []).push(p);
     return acc;
   }, {});
-  const categoryOrder = Array.from(new Set(products.map((p) => p.category)));
+  const categoryOrder = Array.from(new Set(todosProdutos.map((p) => p.category)));
 
   return (
     <section id="catalogo" className="py-32 relative">
