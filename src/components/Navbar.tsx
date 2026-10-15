@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Logo } from "./Logo";
 import { Menu, X, Instagram, Facebook, Phone } from "lucide-react";
 import { Button } from "./ui/button";
+import { ProductSearch } from "./ProductSearch";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -50,7 +51,8 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-3">
+          <ProductSearch />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="hero" size="sm">Redes sociais</Button>
@@ -78,13 +80,16 @@ export function Navbar() {
           </DropdownMenu>
         </div>
 
-        <button
-          className="lg:hidden text-accent p-2"
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-        >
-          <span>{open ? <X /> : <Menu />}</span>
-        </button>
+        <div className="flex items-center gap-1 lg:hidden">
+          <ProductSearch className="h-8 w-8" />
+          <button
+            className="lg:hidden text-accent p-2"
+            onClick={() => setOpen(!open)}
+            aria-label="Menu"
+          >
+            <span>{open ? <X /> : <Menu />}</span>
+          </button>
+        </div>
       </div>
 
       {open && (
