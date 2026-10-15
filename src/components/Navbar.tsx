@@ -80,7 +80,7 @@ export function Navbar() {
           </DropdownMenu>
         </div>
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 lg:hidden">
           <ProductSearch className="h-8 w-8" />
           <button
             className="lg:hidden text-accent p-2"
