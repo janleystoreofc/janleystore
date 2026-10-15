@@ -49,9 +49,7 @@ export function ProductDialog({ product, onClose }: { product: Product | null; o
                 {product.desc}
               </DialogDescription>
               <dl className="text-sm grid grid-cols-2 gap-y-1 mb-6">
-                <dt className="text-muted-foreground">Material</dt>
-                <dd>{product.material}</dd>
-                <dt className="text-muted-foreground">Cor</dt>
+                            <dt className="text-muted-foreground">Cor</dt>
                 <dd>{product.color}</dd>
               </dl>
 
