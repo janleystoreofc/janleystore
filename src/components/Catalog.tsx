@@ -42,11 +42,11 @@ const produtosFiltrados = todosProdutos.filter((produto) =>
 );
 
   // Agrupar produtos por categoria preservando a ordem de aparição
-  const grouped = todosProdutosprodutosFiltrados.reduce<Record<string, Product[]>>((acc, p) => {
+  const grouped = produtosFiltrados.reduce<Record<string, Product[]>>((acc, p) => {
     (acc[p.category] ||= []).push(p);
     return acc;
   }, {});
-  const categoryOrder = Array.from(new Set(todosProdutosprodutosFiltrados.map((p) => p.category)));
+  const categoryOrder = Array.from(new Set(produtosFiltrados.map((p) => p.category)));
 
   return (
     <section id="catalogo" className="py-32 relative">
