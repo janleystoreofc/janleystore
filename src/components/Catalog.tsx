@@ -1,4 +1,5 @@
-import { products, type Product } from "@/data/products";
+import { useState } from "react";
+import { type Product } from "@/data/products";
 import { Button } from "./ui/button";
 import { Plus } from "lucide-react";
 import { useCart } from "./cart/CartContext";
