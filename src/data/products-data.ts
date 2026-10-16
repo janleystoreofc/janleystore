@@ -30,7 +30,15 @@ export const colors = ["Todos", "Preto", "Branco", "Cinza", "Dourado", "Cobre"];
 export const materials = ["Todos", "PLA", "PETG", "ABS", "Resina"];
 
 export const productData: ProductData[] = [
-  { id: "p1", name: "Organizador de Secretária Premium", category: "Organização", price: 24, color: "Preto", material: "PETG", image: "catOrg", desc: "Organizador modular em PETG com acabamento mate." },
+  { id: "p1", name: "Organizador de Secretária Premium", category: "Organização", price: 24, color: "Preto", availableColors: [
+  { name: "Preto", background: "#222222" },
+  { name: "Branco", background: "#FFFFFF" },
+  { name: "Dourado", background: "#D4AF37" },
+  {
+    name: "Arco-íris",
+    background: "linear-gradient(135deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF)"
+  },
+], material: "PETG", image: "catOrg", desc: "Organizador modular em PETG com acabamento mate." },
   { id: "p2", name: "Suporte Telemóvel Geométrico", category: "Organização", price: 14, color: "Preto", material: "PLA", image: "catOrg", desc: "Suporte minimalista para mesa." },
   { id: "p3", name: "Organizador de Cabos", category: "Organização", price: 9, color: "Cinza", material: "PLA", image: "catOrg", desc: "Mantém os cabos arrumados com elegância." },
   { id: "p4", name: "Vaso Facetado Onyx", category: "Decoração", price: 32, color: "Preto", material: "PLA", image: "catDecor", desc: "Vaso geométrico de design exclusivo." },
