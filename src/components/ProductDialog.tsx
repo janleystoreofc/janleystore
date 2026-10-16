@@ -102,8 +102,9 @@ export function ProductDialog({ product, onClose }: { product: Product | null; o
                 <Button
                   variant="hero"
                   className="w-full"
+                  disabled={!selectedColor}
                   onClick={() => {
-                    add(product, qty);
+                    add(product, qty, selectedColor);
                     onClose();
                   }}
                 >
