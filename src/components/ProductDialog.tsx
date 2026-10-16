@@ -9,6 +9,7 @@ export function ProductDialog({ product, onClose }: { product: Product | null; o
   const { add } = useCart();
   const [active, setActive] = useState(0);
   const [qty, setQty] = useState(1);
+  const [selectedColor, setSelectedColor] = useState("");
 
   useEffect(() => {
     setActive(0);
