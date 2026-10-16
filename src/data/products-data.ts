@@ -5,7 +5,10 @@ export type ProductData = {
   category: string;
   price: number;
   color: string;
-  availableColors?: string[];
+  availableColors?: {
+  name: string;
+  background: string;
+}[];
   material: string;
   image: string;
   desc: string;
