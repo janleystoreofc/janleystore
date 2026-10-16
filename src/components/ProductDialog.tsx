@@ -12,9 +12,10 @@ export function ProductDialog({ product, onClose }: { product: Product | null; o
   const [selectedColor, setSelectedColor] = useState("");
 
   useEffect(() => {
-    setActive(0);
-    setQty(1);
-  }, [product?.id]);
+  setActive(0);
+  setQty(1);
+  setSelectedColor("");
+}, [product?.id]);
 
   const photos = product ? [product.image, ...(product.images ?? [])] : [];
 
