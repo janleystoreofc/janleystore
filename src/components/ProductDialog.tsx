@@ -56,7 +56,45 @@ export function ProductDialog({ product, onClose }: { product: Product | null; o
   </p>
 
   <div className="flex flex-wrap gap-3">
+   
+<div className="mb-6">
+  <p className="text-sm mb-3">
+    Escolha a cor: {selectedColor || "Selecione"}
+  </p>
+
+  <div className="flex flex-wrap gap-3">
     {(product.availableColors?.length
+      ? product.availableColors
+      : [{ name: product.color, background: product.color }]
+    ).map((color) => (
+      <button
+        key={color.name}
+        type="button"
+        title={color.name}
+        aria-label={`Selecionar ${color.name}`}
+        aria-pressed={selectedColor === color.name}
+        onClick={() => setSelectedColor(color.name)}
+        className={`w-9 h-9 rounded-full border-2 ${
+          selectedColor === color.name
+            ? "border-primary ring-2 ring-primary"
+            : "border-border"
+        }`}
+        style={{
+          background:
+            ({
+              Preto: "#222222",
+              Branco: "#FFFFFF",
+              Cinza: "#999999",
+              Dourado: "#D4AF37",
+              Cobre: "#B87333",
+            } as Record<string, string>)[color.background] ??
+            color.background,
+        }}
+      />
+    ))}
+  </div>
+</div>
+
       ? product.availableColors
       : [product.color]
     ).map((color) => (
